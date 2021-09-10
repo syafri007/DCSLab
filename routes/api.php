@@ -7,6 +7,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\InboxController;
 use App\Http\Controllers\CommonController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ApiAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,8 @@ Route::bind('id', function ($id) {
         return $id;
     }
 });
+
+Route:post('auth', [ApiAuthController::class, 'auth'])->name('api.auth');
 
 Route::group(['prefix' => 'get', 'middleware' => 'auth:sanctum'], function () {
     Route::get('profile/read', [DashboardController::class, 'readProfile'])->name('api.get.profile.read');
