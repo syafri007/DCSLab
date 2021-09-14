@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Rules\sameEmail;
 use App\Services\ActivityLogService;
 use App\Services\UserService;
 use Illuminate\Http\Request;
@@ -60,7 +59,7 @@ class DashboardController extends Controller
 
         $request->validate([
             'name' => 'required',
-            'email' => new sameEmail($id),
+            'email' => 'required|email|max:255|unique:users,email,'.$id,
             'tax_id' => 'required',
             'ic_num' => 'required',
         ]);
