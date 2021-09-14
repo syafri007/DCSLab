@@ -7,13 +7,15 @@ use App\Services\UserService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class DashboardController extends Controller
+class DashboardController extends BaseController
 {
     private $userService;
     private $activityLogService;
 
     public function __construct(UserService $userService, ActivityLogService $activityLogService)
     {
+        parent::__construct();
+
         $this->middleware('auth');
         $this->userService = $userService;
         $this->activityLogService = $activityLogService;
