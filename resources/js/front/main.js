@@ -8,8 +8,6 @@ var toToggle = document.querySelectorAll(".toggleColour");
 document.addEventListener("scroll", function () {
     scrollpos = window.scrollY;
 
-    console.log('in');
-
     if (scrollpos > 10) {
         header.classList.add("bg-white");
         navaction.classList.remove("bg-white");
