@@ -15,27 +15,27 @@
                                 <img src="{{ asset('images/g_logo.png') }}" alt="Logo" width="50px" height="50px">
                             </a>
 
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="toggler-icon"></span>
                                 <span class="toggler-icon"></span>
                                 <span class="toggler-icon"></span>
                             </button>
 
-                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarOne">
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarMain">
                                 <ul class="navbar-nav m-auto">
-                                    <li class="nav-item active">
+                                    <li class="nav-item active" data-menu="home">
                                         <a class="page-scroll text-uppercase" href="#home">{{ __('front.menu.home') }}</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="nav-item" data-menu="service">
                                         <a class="page-scroll text-uppercase" href="#service">{{ __('front.menu.services') }}</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="nav-item" data-menu="pricing">
                                         <a class="page-scroll text-uppercase" href="#pricing">{{ __('front.menu.pricing') }}</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="nav-item" data-menu="contact">
                                         <a class="page-scroll text-uppercase" href="#contact">{{ __('front.menu.contact') }}</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <li class="nav-item" data-menu="dashboard">
                                         <a class="text-uppercase" href="{{ route('front') }}">{{ __('front.menu.dashboard') }}</a>
                                     </li>
                                 </ul>

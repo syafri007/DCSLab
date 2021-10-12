@@ -78,4 +78,4 @@
     </div>
 </footer>
 
-<a class="back-to-top" href="#"><i class="icon icon-arrow-up"></i></a>
+<a class="back-to-top hide" href="#"><i class="icon icon-arrow-up"></i></a>
